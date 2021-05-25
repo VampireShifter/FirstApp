@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.wangtao.firstapp.R;
 
+/**
+ * 主页面
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -12,4 +15,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
 }
