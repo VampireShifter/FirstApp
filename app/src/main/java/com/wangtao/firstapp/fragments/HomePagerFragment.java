@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import com.jude.rollviewpager.RollPagerView;
 import com.wangtao.firstapp.R;
-import com.wangtao.firstapp.adapters.HomeVPAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +20,11 @@ import java.util.List;
  * Created by lanouhn on 16/8/24.
  */
 public class HomePagerFragment extends Fragment {
-
     private RollPagerView rollPagerView;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private List<String> hometabNames;
     private List<Fragment> homefragments;
-    private HomeVPAdapter homeVPAdapter;
 
 
     @Nullable
@@ -47,46 +44,14 @@ public class HomePagerFragment extends Fragment {
     private void initData() {
 
         hometabNames = new ArrayList<>();
-        hometabNames.add("精选");
-        hometabNames.add("原创精选");
-        hometabNames.add("一周最热");
-        hometabNames.add("美妆&穿搭");
-        hometabNames.add("礼物");
-        hometabNames.add("美食");
-        hometabNames.add("设计感");
-        hometabNames.add("文艺");
-        hometabNames.add("学生党");
+        hometabNames.add("");
 
         homefragments = new ArrayList<>();
-        SifeFragment sifeFragment = new SifeFragment();
-        OriginalSifeFragment originalSifeFragment = new OriginalSifeFragment();
-        WeekHotFragmet weekHotFragmet = new WeekHotFragmet();
-        WearFragment wearFragment = new WearFragment();
-        GiftFragment giftFragment = new GiftFragment();
-        CateFragment cateFragment = new CateFragment();
-        DesignFragment designFragment = new DesignFragment();
-        ArtFragment artFragment = new ArtFragment();
-        StudentFragment studentFragment = new StudentFragment();
 
-        homefragments.add(sifeFragment);
-        homefragments.add(originalSifeFragment);
-        homefragments.add(weekHotFragmet);
-        homefragments.add(wearFragment);
-        homefragments.add(giftFragment);
-        homefragments.add(cateFragment);
-        homefragments.add(designFragment);
-        homefragments.add(artFragment);
-        homefragments.add(studentFragment);
-
-        homeVPAdapter = new HomeVPAdapter(getFragmentManager(), hometabNames, homefragments);
-        viewPager.setAdapter(homeVPAdapter);
-        tabLayout.setupWithViewPager(viewPager);
 
     }
 
     private void initEvent() {
 
     }
-
-
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_article"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/discover_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_topic_community_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_main_community_topic_attention"
+                android:text="关注动态"
+                android:textColor="@android:color/black"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="40dp"></View>
+
+            <RadioButton
+                android:id="@+id/rb_topic_community_newest"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_main_home_community_topic_newest"
+                android:text="新鲜原创"
+                android:textColor="@android:color/black"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="40dp"></View>
+
+            <RadioButton
+                android:id="@+id/rb_topic_community_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_main_home_community_topic_rank"
+                android:text="排行榜"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+        <View
+            android:id="@+id/dividerline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/discover_radiogroup"
+            android:background="#CCC"></View>
+
+        <ImageView
+            android:id="@+id/imageview_articleguide"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/dividerline"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_article"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imageview_articleguide"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</ScrollView>
